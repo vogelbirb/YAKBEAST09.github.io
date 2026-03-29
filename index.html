@@ -4,6 +4,9 @@
         <title>amogus ded</title>
     </head>
     <style>
+        body, marquee {
+    color: white;
+    }
         h1{
             color:aqua;
             color: #000;
@@ -54,7 +57,7 @@
         }
         #of{
             background-color: gray;
-            height: 90px;
+            /*height: 90px; */
             overflow: auto;
         }
         #yak-div{
@@ -124,28 +127,139 @@
         {
             text-align: left;
         }
-        
+         
     </style>
     <body>
-        <h1>Table Of Contents</h1>
+        <h1><marquee scrollamount="50" direction="right">Table Of Contents</marquee></h1>
         <p>Click on the Chapters to teleport to them</p>
+<button id="shit1" onclick="initiateBrainrot()">DON'T CLICK ME!</button>
+
+<style>
+#shit1 {
+  position: relative;
+  color: white;
+  border: none;
+  padding: 1em 2em;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  animation: move1 2s infinite alternate, blink1 0.5s infinite, pulse1 1s infinite, wiggle1 0.3s infinite;
+}
+
+/* Horizontal movement */
+@keyframes move1 {
+  0% { left: 0; }
+  50% { left: 70%; }
+  100% { left: 0; }
+}
+
+/* Flashing red */
+@keyframes blink1 {
+  0%, 50%, 100% { background-color: red; }
+  25%, 75% { background-color: darkred; }
+}
+
+/* Pulsing size */
+@keyframes pulse1 {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+/* Slight rotation */
+@keyframes wiggle1 {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+</style>
+<button id="shit2" onclick="initiateBrainrot()">CLICK ME!</button>
+
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+        position: relative;
+}
+
+#shit2 {
+  position: fixed;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  background-color: blue;
+  border: none;
+  cursor: pointer;
+  animation: blink 0.3s infinite;
+}
+
+/* Rapid flashing red */
+@keyframes blink {
+  0%, 50%, 100% { background-color: blue; }
+  25%, 75% { background-color: green; }
+}
+</style>
+
+<script>
+const btn = document.getElementById('shit2');
+
+const moveButton = () => {
+  const vw = window.innerWidth - btn.offsetWidth;
+  const vh = window.innerHeight - btn.offsetHeight;
+  const x = Math.random() * vw;
+  const y = Math.random() * vh;
+  const rotation = (Math.random() * 60 - 30); // random rotation -30° to 30°
+  const scale = 0.8 + Math.random() * 0.6; // scale 0.8–1.4
+  btn.style.transition = "all 0.15s linear";
+  btn.style.left = x + "px";
+  btn.style.top = y + "px";
+  btn.style.transform = `rotate(${rotation}deg) scale(${scale})`;
+};
+
+// Move every 150ms
+setInterval(moveButton, 150);
+
+// Optional: disappear on click
+btn.addEventListener('click', () => btn.style.display = 'none');
+</script>
+        <video id="bgVideo" autoplay muted loop playsinline>
+  <source src="yt_minecraft_hacker.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills screen without stretching */
+  z-index: -1; /* behind all content */
+}
+</style>
         <hi id="demo"></hi>
         <div id="of">
         <ol>
-            <li class="table"><a href="#bad">Bad Video</a></li>
-            <li class="table"><a href="#vs">VS code is the best</a></li>
-            <li class="table"><a href="#vs">VS code Good</a></li>
-            <li class="table"><a href="#sus">That's A Bit Sussy</a></li>
-            <li class="table"><a href="#code">Programming Languages</a></li>    
-            <li class="table"><a href="#cookie">TIKY</a></li>
-            <li class="table"><a href="#NOT-SUS">NOT SUS</a></li>  
-            <li class="table"><a href="#yak-store">Yak Store</a></li>
-            <li class="table"><a href="#ed">To Learn HTML For Yourself</a></li>   
-            <li class="table"><a href="#waste">Waste Of Time LOL</a></li>  
+            <li class="table"><a href="#bad" onclick="initiateBrainrot()">Bad Video</a></li>
+            <li class="table"><a href="#vs" onclick="initiateBrainrot()">VS code is the best</a></li>
+            <li class="table"><a href="#vs" onclick="initiateBrainrot()">VS code Good</a></li>
+            <li class="table"><a href="#sus" onclick="initiateBrainrot()">That's A Bit Sussy</a></li>
+            <li class="table"><a href="#code" onclick="initiateBrainrot()">Programming Languages</a></li>    
+            <li class="table"><a href="#cookie" onclick="initiateBrainrot()">TIKY</a></li>
+            <li class="table"><a href="#NOT-SUS" onclick="initiateBrainrot()">NOT SUS</a></li>  
+            <li class="table"><a href="#yak-store" onclick="initiateBrainrot()">Yak Store</a></li>
+            <li class="table"><a href="#ed" onclick="initiateBrainrot()">To Learn HTML For Yourself</a></li>   
+            <li class="table"><a href="#waste" onclick="initiateBrainrot()">Waste Of Time LOL</a></li>  
         </ol></div>
-        <h1 id="bad">My First Vid (Bad)</h1>
+        <h1 id="bad"><marquee scrollamount="50" direction="right">My First Vid (Bad)</marquee></h1>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/xnk_Kv_gTd8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <h1>My Second Video (Bad AND CRINGE)</h1>
+        <h1><marquee scrollamount="50" direction="right">My Second Video (Bad AND CRINGE)</marquee></h1>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Rgi2hXMl_3A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <h1 id="vs">so visualstudio code is the best coding app IN THE WORLD</h1>
         <h2 id="sus">SUS</h2>
@@ -155,27 +269,27 @@
         <li>WE NEED TO VOTE OUT THAT <strong><em><span id="sususus">SUSSY IMPOSTER</span></em></strong></li>
         <li>amogus</li>
         <p id="code">Here are all of the programing languages i know exist</p>
-       <li><a href="https://html.com/">HTML</a></li>
-        <li><a href="https://www.python.org/">PYTHON</a></li>
-        <li><a href="https://www.java.com/en/">JAVA</a></li>
-        <LI><a href="https://www.javascript.com/">JAVASCRIPT</a></LI>
-        <LI><a href="https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0">C++</a></LI>
-        <LI><a href="https://www.microsoft.com/en-us/download/details.aspx?id=7029">C#</a></LI>
-        <LI><a href="https://swift.org/download/">SWIFT</a></LI>
+       <li><a href="https://html.com/" onclick="initiateBrainrot()">HTML</a></li>
+        <li><a href="https://www.python.org/" onclick="initiateBrainrot()">PYTHON</a></li>
+        <li><a href="https://www.java.com/en/" onclick="initiateBrainrot()">JAVA</a></li>
+        <LI><a href="https://www.javascript.com/" onclick="initiateBrainrot()">JAVASCRIPT</a></LI>
+        <LI><a href="https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0" onclick="initiateBrainrot()">C++</a></LI>
+        <LI><a href="https://www.microsoft.com/en-us/download/details.aspx?id=7029" onclick="initiateBrainrot()">C#</a></LI>
+        <LI><a href="https://swift.org/download/" onclick="initiateBrainrot()">SWIFT</a></LI>
         <img src="https://d.newsweek.com/en/full/1680706/national-cookie-day.jpg" width="200" height="200" id="cookie">
         <img src="https://preview.redd.it/dq5kt78545371.jpg?width=960&crop=smart&auto=webp&s=166d19fc5b876d3d5ede3265a6a7483454d8b883" width="200" height="300">
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" id="NOT-SUS">totally not suspicious link</a><hr>
         <p><br>Y<br>A<br>K<br></p>
         <h1 id="yak-store">Yak Store</h1><br><br>
-        <a href="https://www.microsoft.com/en-us/p/minecraft-for-windows-10/9nblggh2jhxj?activetab=pivot:overviewtab"><img src="https://apptros.com/wp-content/uploads/2020/12/minecraft-logo-online-game-dirt-block-illustrations-concept-design-isolated-186775550.jpg" alt="" class="img" id="mcb"></a>
+        <a href="https://www.microsoft.com/en-us/p/minecraft-for-windows-10/9nblggh2jhxj?activetab=pivot:overviewtab" onclick="initiateBrainrot()"><img src="https://apptros.com/wp-content/uploads/2020/12/minecraft-logo-online-game-dirt-block-illustrations-concept-design-isolated-186775550.jpg" alt="" class="img" id="mcb"></a>
         
-        <a href="https://www.minecraft.net/en-us/download"><img src="https://i.pinimg.com/736x/bb/f7/35/bbf735972855a314aa13cb0244c9d373--hd-icons-desktop-icons.jpg" alt="" class="img" id="mcj"></a>
+        <a href="https://www.minecraft.net/en-us/download" onclick="initiateBrainrot()"><img src="https://i.pinimg.com/736x/bb/f7/35/bbf735972855a314aa13cb0244c9d373--hd-icons-desktop-icons.jpg" alt="" class="img" id="mcj"></a>
 
         
         <br><br><h1 id="ed"> 3 Educational Links To Learn HTML</h1>
-        <ol><li class="educational-links"><a href="https://www.w3schools.com/html/default.asp" class="educational-links">W3Schools</a></li>
-            <li class="educational-links"><a href="https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-html/pt/html-basics" class="educational-links">Khan Academy</a></li> <!--the one i used to learn HTML-->
-            <li class="educational-links"><a href="https://www.codecademy.com/learn/learn-html" class="educational-links">Code Academy</a></li>
+        <ol><li class="educational-links"><a href="https://www.w3schools.com/html/default.asp" class="educational-links" onclick="initiateBrainrot()">W3Schools</a></li>
+            <li class="educational-links"><a href="https://www.khanacademy.org/computing/computer-programming/html-css/intro-to-html/pt/html-basics" class="educational-links" onclick="initiateBrainrot()">Khan Academy</a></li> <!--the one i used to learn HTML-->
+            <li class="educational-links"><a href="https://www.codecademy.com/learn/learn-html" class="educational-links" onclick="initiateBrainrot()">Code Academy</a></li>
         </ol> 
         <script>
             function today(read) {
@@ -185,7 +299,7 @@
             }
             
         </script>
-        <button onclick="today('hi')" id="firstbutton">Do you want to know what day today is?</button>
+        <button onclick="today('hi'); initiateBrainrot()" id="firstbutton">Do you want to know what day today is?</button>
 
         <h1 class="newthing">Hello I am Back From JS, C#, and Python</h1>
 
@@ -207,19 +321,27 @@
 
         </script>
 
-        <button onclick='alert("GET JS^d LOLOLOLOLOLOLOLOLOLOLOLOL")' id="waste">Click For Important Alert</button>
+        <button onclick='initiateBrainrot(); alert("GET JS^d LOLOLOLOLOLOLOLOLOLOLOLOL")' id="waste">Click For Important Alert</button>
 
-        <h1><a href="https://www.unrealengine.com/en-US/">Unreal Engine</a></h1>
-        <h1><a href="https://unity.com/">Unity</a></h1>
+        <h1><a href="https://www.unrealengine.com/en-US/" onclick="initiateBrainrot()">Unreal Engine</a></h1>
+        <h1><a href="https://unity.com/" onclick="initiateBrainrot()">Unity</a></h1>
         <h1>Which one is better?</h1>
 
 
         
-        <a href="https://cookiebeast09.github.io/"><h1>My Own Cookie Clicker</h1></a>
+        <a href="https://cookiebeast09.github.io/" onclick="initiateBrainrot()"><h1>My Own Cookie Clicker</h1></a>
        
-        
-        
+        <audio id="brainrot" src="interesting_audio.mp3" loop autoplay muted></audio>
+        <script>
+        function initiateBrainrot() {
+            const brainrot = document.getElementById('brainrot');
+            brainrot.muted = false;
+            brainrot.play();  
+            const vid = document.getElementById('bgVideo');
+  vid.play().catch(e => console.log('Video play blocked:', e));
+        }
+        </script> 
 
-
+        
     </body>    
 </html>
